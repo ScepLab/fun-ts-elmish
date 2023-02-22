@@ -1,1 +1,3 @@
-# fun-ts-elmish
+# Elmish
+
+*Implementation of the elm architecture with typescript.*

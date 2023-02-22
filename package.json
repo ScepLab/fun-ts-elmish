@@ -1,0 +1,55 @@
+{
+    "name": "fun-ts-elmish",
+    "description": "Implementation of the elm architecture with typescript.",
+    "author": {
+        "name": "Jonathan Philipps",
+        "url": "https://github.com/jphilipps"
+    },
+    "contributors": [
+        {
+            "name": "Thomas Müller",
+            "url": "https://github.com/tmueller"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ScepLab/fun-ts-elmish"
+    },
+    "license": "MIT",
+    "version": "0.1.0",
+    "module": "./dist/index.js",
+    "main": "./dist/index.cjs",
+    "types": "./dist/index.d.ts",
+    "type": "module",
+    "sideEffects": false,
+    "files": [
+        "/dist"
+    ],
+    "scripts": {
+        "lint": "eslint ./src/**/*.ts*",
+        "build": "npm run -s clean && tsc -p ./tsconfig.json --composite false && node ./esbuild.config.js",
+        "clean": "rm -rf ./dist",
+        "polish": "rm -rf .turbo && rm -rf ./node_modules && rm -rf ./dist",
+        "deliver": "npm publish --access=public"
+    },
+    "dependencies": {
+        "fp-ts": "^2.12.1"
+    },
+    "peerDependencies": {
+        "history": "^4.10.1",
+        "type-fest": "^3.6.0"
+    },
+    "devDependencies": {
+        "type-fest": "^3.6.0",
+        "@types/history": "^4.7.11",
+        "history": "^4.10.1",
+        "@typescript-eslint/eslint-plugin": "5.53.0",
+        "@typescript-eslint/parser": "5.53.0",
+        "cspell": "6.26.3",
+        "eslint": "8.34.0",
+        "jshint": "2.13.6",
+        "esbuild": "0.17.10",
+        "esbuild-node-externals": "1.6.0",
+        "typescript": "4.9.5"
+    }
+}
