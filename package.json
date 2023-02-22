@@ -1,5 +1,5 @@
 {
-    "name": "@fun-ts/elmish-ts",
+    "name": "fun-ts-elmish",
     "description": "Implementation of the elm architecture with typescript.",
     "author": {
         "name": "Jonathan Philipps",
