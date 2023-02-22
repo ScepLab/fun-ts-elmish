@@ -35,7 +35,7 @@
         "build": "npm run -s clean && tsc -p ./tsconfig.json --composite false && node ./esbuild.config.js",
         "clean": "rm -rf ./dist",
         "polish": "rm -rf .turbo && rm -rf ./node_modules && rm -rf ./dist",
-        "deliver": "npm publish --access=public"
+        "deliver": "pnpm publish --access=public"
     },
     "dependencies": {
         "fp-ts": "^2.12.1"
