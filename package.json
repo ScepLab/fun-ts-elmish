@@ -15,6 +15,11 @@
         "type": "git",
         "url": "https://github.com/ScepLab/fun-ts-elmish"
     },
+    "engineStrict": true,
+    "engines": {
+        "node": "18.14.1",
+        "pnpm": "7.27.1"
+    },
     "license": "MIT",
     "version": "0.1.0",
     "module": "./dist/index.js",
