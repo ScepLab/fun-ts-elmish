@@ -29,3 +29,6 @@ jobs:
             - run: pnpm install --frozen-lockfile
             - run: pnpm run build
             - run: pnpm run lint
+            - run: pnpm run deliver
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
