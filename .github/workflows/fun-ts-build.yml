@@ -1,4 +1,4 @@
-name: fun-ts-elmish build
+name: build fun-ts-elmish package
 
 on:
     push:

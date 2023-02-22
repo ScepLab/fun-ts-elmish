@@ -15,6 +15,15 @@
         "type": "git",
         "url": "https://github.com/ScepLab/fun-ts-elmish"
     },
+    "bugs": {
+        "url": "https://github.com/ScepLab/fun-ts-elmish/issues"
+    },
+    "keywords": [
+        "fun",
+        "typescript",
+        "functional-programming",
+        "elmish"
+    ],
     "engineStrict": true,
     "engines": {
         "node": "18.14.1",
