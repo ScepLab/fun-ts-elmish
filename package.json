@@ -1,5 +1,5 @@
 {
-    "name": "fun-ts-elmish",
+    "name": "@fun-ts/elmish-ts",
     "description": "Implementation of the elm architecture with typescript.",
     "author": {
         "name": "Jonathan Philipps",
@@ -21,7 +21,7 @@
         "pnpm": "7.27.1"
     },
     "license": "MIT",
-    "version": "0.1.7",
+    "version": "0.1.8",
     "module": "./dist/index.js",
     "main": "./dist/index.cjs",
     "types": "./dist/index.d.ts",
