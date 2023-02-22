@@ -30,7 +30,7 @@
         "pnpm": "7.27.1"
     },
     "license": "MIT",
-    "version": "0.1.8",
+    "version": "0.1.9",
     "module": "./dist/index.js",
     "main": "./dist/index.cjs",
     "types": "./dist/index.d.ts",
