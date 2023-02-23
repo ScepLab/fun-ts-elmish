@@ -1,6 +1,7 @@
 {
     "name": "fun-ts-elmish",
     "description": "Implementation of the elm architecture with typescript.",
+    "version": "0.1.10",
     "author": {
         "name": "Jonathan Philipps",
         "url": "https://github.com/jphilipps"
@@ -30,7 +31,6 @@
         "pnpm": "7.27.1"
     },
     "license": "MIT",
-    "version": "0.1.9",
     "module": "./dist/index.js",
     "main": "./dist/index.cjs",
     "types": "./dist/index.d.ts",
@@ -62,7 +62,7 @@
         "cspell": "6.26.3",
         "eslint": "8.34.0",
         "jshint": "2.13.6",
-        "esbuild": "0.17.10",
+        "esbuild": "0.16.0",
         "esbuild-node-externals": "1.6.0",
         "typescript": "4.9.5"
     }
