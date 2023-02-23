@@ -47,9 +47,14 @@ export namespace program {
         setState: child.setState,
 
         // :( Type assertion
-        init: (p) => child.init({ ...p, location: history.location } as ChildArg),
+        init: p => child.init(
+            {
+                ...p,
+                location: history.location
+            } as ChildArg
+        ),
 
-        subscribe: (initModel) => cmd.batch(
+        subscribe: initModel => cmd.batch(
             child.subscribe(initModel),
             cmd.ofSub(dispatch => {
                 history.listen(flow(

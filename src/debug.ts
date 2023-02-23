@@ -26,7 +26,7 @@ const augmentInit = <Model, Msg, Args>(
 ): Init<Model, Msg, Args> => pipe(
     init,
     augment(
-        (arg) => console.debug("Init with", { arg }),
+        arg => console.debug("Init with", { arg }),
         ([model, commands]) => console.debug("After Init", { model, commands })
     )
 );
