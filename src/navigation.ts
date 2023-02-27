@@ -2,8 +2,8 @@ import * as H from "history";
 import * as cmd from "./cmd";
 
 import { ElmishResult, Program } from "./program";
+import { Except, Simplify } from "type-fest";
 
-import { Simplify } from "type-fest";
 import { flow } from "fp-ts/function";
 
 export type Location = H.Location;
@@ -37,7 +37,7 @@ export namespace program {
     ) => <ChildArg extends InitArgWithLocation, ChildModel, ChildViewResult>(
         child: Program<ChildArg, ChildModel, Msg, ChildViewResult>
     ): Program<
-        Simplify<Omit<ChildArg, "location">>,
+        Simplify<Except<ChildArg, "location">>,
         ChildModel,
         Msg,
         ChildViewResult
@@ -58,6 +58,7 @@ export namespace program {
             child.subscribe(initModel),
             cmd.ofSub(dispatch => {
                 history.listen(flow(
+                    history => history.location,
                     locationToMessage,
                     dispatch,
                 ));
