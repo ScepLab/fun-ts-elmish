@@ -1,7 +1,7 @@
 {
     "name": "fun-ts-elmish",
     "description": "Implementation of the elm architecture with typescript.",
-    "version": "0.1.14",
+    "version": "0.1.15",
     "author": {
         "name": "Jonathan Philipps",
         "url": "https://github.com/jphilipps"
