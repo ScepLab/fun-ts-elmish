@@ -4,7 +4,10 @@ export * as debug from "./debug";
 
 import { elmishifyHistory, program } from "./navigation";
 
-export const navigation = { program, elmishifyHistory };
+export const navigation = {
+    program,
+    elmishifyHistory
+};
 
 export type {
     View,
