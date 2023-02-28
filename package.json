@@ -54,6 +54,7 @@
     },
     "devDependencies": {
         "fp-ts": "^2.13.1",
+        "type-fest": "3.6.1",
         "@typescript-eslint/eslint-plugin": "5.53.0",
         "@typescript-eslint/parser": "5.53.0",
         "cspell": "6.27.0",

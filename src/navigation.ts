@@ -3,6 +3,7 @@ import * as cmd from "./cmd";
 
 import { ElmishResult, Program } from "./program";
 
+import { Except } from "type-fest";
 import { flow } from "fp-ts/function";
 
 export type Location = H.Location;
@@ -36,7 +37,7 @@ export namespace program {
     ) => <ChildArg extends InitArgWithLocation, ChildModel, ChildViewResult>(
         child: Program<ChildArg, ChildModel, Msg, ChildViewResult>
     ): Program<
-        ChildArg,
+        Except<ChildArg, "location">,
         ChildModel,
         Msg,
         ChildViewResult
@@ -45,11 +46,12 @@ export namespace program {
         view: child.view,
         setState: child.setState,
 
+        // :( Type assertion
         init: p => child.init(
             {
                 ...p,
                 location: history.location
-            }
+            } as ChildArg
         ),
 
         subscribe: initModel => cmd.batch(
